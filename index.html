@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Cabecera fija</title>
+     <link rel="stylesheet" href="estilo.css">
+     <link rel="stylesheet" href="login.css">
+     <script  src="app.js" type=""></script>
+</head>
+<body>	
+	<header id="main-header">		
+		<a id="logo-header" href="#">
+			<img src="pc.png" height="50px;" width="100px" >
+		</a> <!-- / #logo-header -->
+		<nav>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Servicio</a></li>
+				<li><a href="#">Contactos</a></li>
+				<li><a href="#">Acerca De</a></li>
+										
+			</ul>	
+
+		</nav><!-- / nav -->
+			
+	</header><!-- / #main-header -->
+    <section>
+    	<div id="main-content">
+    		<header class="jpg">
+	              	<form id="">
+	              		<center>
+	              			<img src="portada.jpg"  width="80%" margin=0>
+	              		</center>
+					</form>						
+		                
+	    </header>
+
+    	</div>	                		
+	        
+	</section> <!-- / #main-content -->	
+
+
+<section id="main-content">
+						    
+		     		  	
+	              <div id="contenedor">
+						<div  id="login">			
+						   			
+									<h1>Iniciar Sesion</h1>
+							<div>
+									<br>
+								<input id="NombreUsuario" type="text" placeholder="Nombre usuario" name="">
+								<br>
+								<button onclick='saludar("ERNESTH"," YAÑEZ")'>INGRESAR</button>
+							</div>								
+							<script>
+								function saludar(nombre,apellido) {
+									console.log("BIENVENIDO"+nombre+""+apellido);
+									alert("BIENVENIDO -- "+nombre+""+apellido)
+								}
+							</script>
+						</div>			
+							
+			         <div id="login" margin="100px">
+			         
+			         			<h1>Imagen</h1>		         	
+			         		    <div>
+			         		    	 <br>
+			                    	<img class="logoPiePagina" src="otro.jpg"   > 
+			         		    </div>                     	
+			         		
+			         </div>
+			        
+
+			             <div id="login">
+			             	<h2>Ivestigacion</h2> 	             	
+							    
+							    	<div>
+									    		<p>
+									    	La investigación es el trabajo creativo y sistemático realizado para aumentar el acervo de conocimientos.​ Implica la recopilación, organización y análisis de información para aumentar la comprensión de un tema o problema. Un proyecto de investigación puede ser una expansión del trabajo anterior en el campo
+									    </p>
+							    	</div>
+							</div>
+			    </div>
+     	
+			
+</section>
+	<footer>
+	<section  class="caja">				
+			<div class="cajas">
+					<h2>Materias</h2>	
+					
+						<li><a href="">francesa</a></li>	
+						<li><a href="">rusa</a></li>
+						<li><a href=""> americana</a></li>			
+				</div>	
+
+					  <div class="cajas">
+							    <h2>Ivestigacion</h2> 
+							    	<p>
+							    	La investigación es el trabajo creativo y sistemático realizado para aumentar el acervo de conocimientos.​ Implica la recopilación, organización y análisis de información para aumentar la comprensión de un tema o problema. Un proyecto de investigación puede ser una expansión del trabajo anterior en el campo
+							    </p>
+							</div>
+
+
+
+				<div class="cajas"> 
+				<h2>Ingrese en Bs.</h2>
+							    
+								<input type="text" placeholder="escribir un" id="bs">
+								<br>
+						<input type="button" value="Convertir de Bs. a $" onclick="convertir_a_$(document.getElementById('bs').value)">
+						<input type="button" value="Convertir de Bs. a €" onclick="convertir_a_E(document.getElementById('bs').value)">
+						<script type="text/javascript">
+							function convertir_a_$(bs)
+							{
+								numero=/[0-9\.]$/;
+								if (!numero.exec(bs)) {
+									alert("Esto no es un numero");		
+								}
+								else{
+									dolar=6.96;
+									resultado=bs*dolar;
+									document.getElementById("total").innerHTML="El Total Es: "+resultado.toFixed(2) +" $. ";
+								}
+							}
+						</script><script type="text/javascript">
+							function convertir_a_E(bs)
+							{
+								numero=/[0-9\.]$/;
+								if (!numero.exec(bs)) {
+									alert("Esto no es un numero");		
+								}
+								else{
+									dolar=6.88;
+									resultado=bs*dolar;
+									document.getElementById("total2").innerHTML="El Total Es: "+resultado.toFixed(2) +" €. ";
+								}
+							}
+						</script>
+						<div id="total"></div>
+						<div id="total2"></div>
+		</div>
+	</section>			
+			
+	</footer> <!-- / #main-footer -->	
+</body>
+</html>
